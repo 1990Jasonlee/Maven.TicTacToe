@@ -53,7 +53,20 @@ public class Board {
         }
 
     public Boolean isTie() {
+        String tie = getWinner();
+        if (tie == ""){
+        return true;
+        }else {
+            return false;
+        }
     }
 
     public String getWinner() {
+        if (isInFavorOfX() == true) {
+            return "X";
+        }else if (isInFavorOfO() == true){
+            return "O";
+        }else return "";
+    }
+
 }
